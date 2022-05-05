@@ -35,15 +35,12 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
 
 // Accessing the Toronto airline routes GeoJSON URL.
-let torontoHoods = "https://raw.githubusercontent.com/laurennhess/Mapping_Earthquakes/Mapping_GeoJSON_Polygons/Mapping_GeoJSON_Polygons/torontoNeighborhoods.json";
-
+let torontoHoods = "https://raw.githubusercontent.com/laurennhess/Mapping_Earthquakes/main/Mapping_GeoJSON_Polygons/torontoNeighborhoods.json";
 // Create a style for the lines.
 let myStyle = {
   color: "blue",
   fillColor: "#ffffa1",
   weight: 1
-
-
 }
 
 // Grabbing our GeoJSON data.
