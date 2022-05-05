@@ -31,12 +31,11 @@ let map = L.map('mapid', {
   layers: [satelliteStreets]
 });
 
-
 // Pass our map layers into our layers control and add the layers control to the map.
 L.control.layers(baseMaps).addTo(map);
 
 // Accessing the airport GeoJSON URL
-let torontoHoods = "https://raw.githubusercontent.com/sarahhaley1/Mapping_Earthquakes/main/torontoNeighborhoods.json";
+let torontoHoods = "https://raw.githubusercontent.com/laurennhess/Mapping_Earthquakes/main/torontoNeighborhoods.json";
 
 // Grabbing GeoJSON data
 d3.json(torontoHoods).then(function(data) {
