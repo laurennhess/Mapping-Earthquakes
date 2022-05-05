@@ -17,18 +17,18 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 	accessToken: API_KEY
 });
 
-// Create a base layer that holds both maps.
-let baseMaps = {
-  Light: light,
-  Dark: dark
-};
-
 // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
   center: [44.0, -80.0],
   zoom: 2,
   layers: [dark]
 })
+
+// Create a base layer that holds both maps.
+let baseMaps = {
+  Light: light,
+  Dark: dark
+};
 
 
 // Pass our map layers into our layers control and add the layers control to the map.
@@ -42,6 +42,7 @@ let myStyle = {
   color: "#ffffa1",
   weight: 2
 }
+
 // Grabbing our GeoJSON data
 d3.json(torontoData).then(function(data) {
   console.log(data);
